@@ -1,6 +1,6 @@
 <template>
     <main>
-        <small>ADVICE #{{quote_index}}</small>
+        <small>ADVICE #{{quote_index}} </small>
         <p>{{selected_quote}}</p>
         <Divider_svg/>
         <div @click="change_quote" class="dice">
