@@ -2,6 +2,7 @@
 node_modules
 /dist
 /advice-generator-app-main
+/Advice-generator
 
 
 # local env files
