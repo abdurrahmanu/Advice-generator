@@ -3,9 +3,7 @@
         <small>ADVICE #{{quote_index}} </small>
         <p>{{selected_quote}}</p>
         <Divider_svg/>
-        <div @click="change_quote" class="dice">
-           <Dice_svg/>
-        </div>
+        <Dice_svg @click="change_quote"/>
     </main>
 </template>
 
@@ -61,19 +59,6 @@ small {
   color: hsl(150, 100%, 66%);
   font-weight: 700;
   font-size: 11px;
-}
-
-.dice {
-  background: hsl(150, 100%, 66%);
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 </style>
