@@ -4,7 +4,7 @@
         <p>{{selected_quote}}</p>
         <Divider_svg/>
         <div @click="change_quote" class="dice">
-        <Dice_svg/>
+           <Dice_svg/>
         </div>
     </main>
 </template>
@@ -36,7 +36,7 @@ body {
   background: hsl(218, 23%, 16%);
   padding: 0;
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   height: 100vh;
   display: grid;
   place-content: center;
