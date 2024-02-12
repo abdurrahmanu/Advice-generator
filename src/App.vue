@@ -1,29 +1,29 @@
 <template>
     <main>
         <small>ADVICE #{{quote_index}} </small>
-        <p>{{selected_quote}}</p>
-        <Divider_svg/>
-        <Dice_svg @click="change_quote"/>
+        <p>{{quote}}</p>
+        <Divider/>
+        <Dice @click="change_quote"/>
     </main>
 </template>
 
 <script setup>
 import data from '../data/quotes.json'
-import Dice_svg from './components/dice_svg.vue'
-import Divider_svg from './components/divider_svg.vue'
+import Dice from './components/dice_svg.vue'
+import Divider from './components/divider_svg.vue'
 import { ref, onBeforeMount } from 'vue';
 
-const selected_quote = ref('')
+const quote = ref('')
 const quote_index = ref(0)
 
 onBeforeMount( () => {
   quote_index.value = Math.floor(Math.random() * data.length)
-  selected_quote.value = data[quote_index.value].quote
+  quote.value = data[quote_index.value].quote
 })
 
 const change_quote = () => {
   quote_index.value = Math.floor(Math.random() * data.length)
-  selected_quote.value = data[quote_index.value].quote
+  quote.value = data[quote_index.value].quote
 }
 
 </script>
